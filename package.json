@@ -1,0 +1,20 @@
+{
+	"name": "tree-structure-mongodb",
+	"author": "Joshua Jung",
+	"description": "tree-structure adapter for mongodb.",
+	"version": "0.0.1",
+	"main": "index.js",
+	"files": [
+		"index.js"
+	],
+	"url": "https://github.com/joshjung/tree-structure-mongodb",
+	"email": "joshua.p.jung@gmail.com",
+	"dependencies": {
+		"hasharray": "^0.1.0",
+		"tree-structure": "^0.0.5",
+		"debug": "^1.0.4"
+	},
+	"devDependencies": {
+		"promised-mongo": "^0.11.1"
+	}
+}
