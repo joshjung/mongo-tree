@@ -7,47 +7,15 @@ var assert = require('assert'),
 
 beforeEach(function() {
 	adapter.connect('mongodb://127.0.0.1:27017/test');
-	return adapter.drop();
-})
+});
 
 describe('TreeStructure', function() {
-	describe('connect to DB should work', function() {
+	describe('Insert into DB should work', function() {
 		var tree = new Tree();
 
-		var flattened = {
-			id: 'some tree',
-			options: {
-				idGenerator: undefined
-			},
-			root: {
-				id: 100,
-				data: {
-					text: "Some data string 100."
-				},
-				children: [{
-					id: 1,
-					data: {
-						text: "Some data string 1."
-					}
-				}, {
-					id: 2,
-					data: {
-						text: "Some data string 2."
-					}
-				}, {
-					id: 3,
-					data: {
-						text: "Some data string 3."
-					}
-				}]
-			}
-		};
+		tree.unflatten(flattened());
 
-		tree.unflatten(flattened);
-
-
-
-		it('Should succeed', function(done) {
+		it('Should insert the tree into the database', function(done) {
 			adapter.insert(tree).then(function() {
 				console.log('insert complete');
 				done();
@@ -56,4 +24,59 @@ describe('TreeStructure', function() {
 			});
 		});
 	});
+
+	describe('Recouple from DB should work', function() {
+		var tree = new Tree();
+
+		tree.unflatten(flattened());
+
+		it('Should insert the tree into the database', function(done) {
+			adapter.insert(tree).then(function() {
+				console.log('insert complete');
+				done();
+			}, function(err) {
+				done(err);
+			});
+		});
+
+		it('Should read the tree from the database', function(done) {
+			adapter.find(tree.id).then(function(value) {
+				console.log(value);
+				done();
+			}, function(err) {
+				done(err);
+			});
+		});
+	});
 });
+
+function flattened() {
+	return {
+		id: 'some tree',
+		options: {
+			idGenerator: undefined
+		},
+		root: {
+			id: 100,
+			data: {
+				text: "Some data string 100."
+			},
+			children: [{
+				id: 1,
+				data: {
+					text: "Some data string 1."
+				}
+			}, {
+				id: 2,
+				data: {
+					text: "Some data string 2."
+				}
+			}, {
+				id: 3,
+				data: {
+					text: "Some data string 3."
+				}
+			}]
+		}
+	};
+}

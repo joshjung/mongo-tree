@@ -15,7 +15,7 @@ Adapter.prototype = {
 		this.db = undefined;
 	},
 	find: function(treeId) {
-		return this.db.find({
+		return this.db[this.settings.treeCollection].find({
 			'_id': treeId
 		});
 	},
