@@ -2,7 +2,7 @@
 	"name": "mongo-tree",
 	"author": "Joshua Jung",
 	"description": "tree-structure adapter for CRUD operations for arbitrary tree data structures to mongodb.",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"main": "index.js",
 	"files": [
 		"index.js"
@@ -10,11 +10,12 @@
 	"url": "https://github.com/joshjung/mongo-tree",
 	"email": "joshua.p.jung@gmail.com",
 	"dependencies": {
+		"debug": "^1.0.4",
+		"hasharray": "^0.1.0",
+		"promised-mongo": "^0.11.1",
 		"q": "1.0.1",
 		"q-foreach": "^0.0.2",
-		"hasharray": "^0.1.0",
-		"tree-structure": "^0.0.7",
-		"debug": "^1.0.4"
+		"tree-structure": "^0.0.7"
 	},
 	"devDependencies": {
 		"promised-mongo": "^0.11.1"
