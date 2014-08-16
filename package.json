@@ -11,8 +11,9 @@
 	"email": "joshua.p.jung@gmail.com",
 	"dependencies": {
 		"q": "1.0.1",
+		"q-foreach": "^0.0.2",
 		"hasharray": "^0.1.0",
-		"tree-structure": "^0.0.5",
+		"tree-structure": "^0.0.7",
 		"debug": "^1.0.4"
 	},
 	"devDependencies": {
