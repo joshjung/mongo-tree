@@ -8,7 +8,6 @@ var Adapter = function(settings) {
 	this.settings = settings || {};
 	this.settings.treeCollection = 'trees';
 	this.settings.nodeCollection = 'nodes';
-	this.settings.database = 'tree-structure';
 };
 
 Adapter.prototype = {

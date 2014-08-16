@@ -1,13 +1,13 @@
 {
-	"name": "tree-structure-mongodb",
+	"name": "mongo-tree",
 	"author": "Joshua Jung",
-	"description": "tree-structure adapter for mongodb.",
+	"description": "tree-structure adapter for CRUD operations for arbitrary tree data structures to mongodb.",
 	"version": "0.0.1",
 	"main": "index.js",
 	"files": [
 		"index.js"
 	],
-	"url": "https://github.com/joshjung/tree-structure-mongodb",
+	"url": "https://github.com/joshjung/mongo-tree",
 	"email": "joshua.p.jung@gmail.com",
 	"dependencies": {
 		"q": "1.0.1",
@@ -18,5 +18,13 @@
 	},
 	"devDependencies": {
 		"promised-mongo": "^0.11.1"
-	}
+	},
+	"keywords": [
+		"mongo",
+		"mongodb",
+		"tree",
+		"tree-structure",
+		"collection",
+		"nodes"
+	]
 }
