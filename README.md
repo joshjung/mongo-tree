@@ -39,7 +39,8 @@ mongo-tree requires two collections, which can be set up like this:
 **Inserting**
 
     var Tree = require('tree-structure').Tree;
-    var mongoTree = (new require('mongo-tree'))();
+    var MongoTree = require('mongo-tree');
+    var mongoTree = new MongoTree();
 
     // Create a new tree object.
     var tree = new Tree();
@@ -87,7 +88,8 @@ Multiple inserts can be performed at a time, like this:
 Trees are retrieved by the tree id:
 
     var Tree = require('tree-structure').Tree;
-    var mongoTree = (new require('mongo-tree'))();
+    var MongoTree = require('mongo-tree');
+    var mongoTree = new MongoTree();
 
     mongoTree.connect('mongodb://127.0.0.1:27017/test');
 
@@ -102,7 +104,8 @@ Trees are retrieved by the tree id:
 Trees are removed from the database by their tree id:
 
     var Tree = require('tree-structure').Tree;
-    var mongoTree = (new require('mongo-tree'))();
+    var MongoTree = require('mongo-tree');
+    var mongoTree = new MongoTree();
 
     mongoTree.connect('mongodb://127.0.0.1:27017/test');
     
