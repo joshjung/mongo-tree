@@ -10,6 +10,7 @@
 	"url": "https://github.com/joshjung/tree-structure-mongodb",
 	"email": "joshua.p.jung@gmail.com",
 	"dependencies": {
+		"q": "1.0.1",
 		"hasharray": "^0.1.0",
 		"tree-structure": "^0.0.5",
 		"debug": "^1.0.4"
