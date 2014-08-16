@@ -83,9 +83,6 @@ Adapter.prototype = {
 			rootId: true
 		}).toArray();
 	},
-	removeOrphanedNodes: function() {
-		return this.db[this.settings.treeCollection]
-	},
 	remove: function(treeOrTreeId) {
 		var treeId = (treeOrTreeId.hasOwnProperty('constructor') && treeOrTreeId.constructor === Tree) ? treeOrTreeId : treeOrTreeId.id;
 		if (!this.db)

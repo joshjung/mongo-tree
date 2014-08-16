@@ -13,6 +13,11 @@ Requirements
     - 1 collection for the trees
     - 1 collection for the nodes
 
+Testing
+=======
+
+    mocha
+
 Examples
 ========
 
@@ -51,13 +56,13 @@ mongo-tree requires two collections, which can be set up like this:
           data: 'this is the root data'
           children: [{
             id: 2,
-            data: 'this is the child node's (2) data'
+            data: 'this is the child nodes (2) data'
           }, {
             id: 3,
-            data: 'this is the child node's (3) data'
+            data: 'this is the child nodes (3) data'
           }, {
             id: 4,
-            data: 'this is the child node's (4) data'
+            data: 'this is the child nodes (4) data'
           }]
         }
       }
@@ -109,7 +114,8 @@ Trees are removed from the database by their tree id:
 
 **Removing Orphaned Nodes**
 
-TODO
+TODO: right now removing a tree simply removes the structure, but not the nodes as each code can technically be referenced
+by multiple parent trees. As a result, a method will need to be built to ensure removal of orphaned nodes.
 
 License
 =======

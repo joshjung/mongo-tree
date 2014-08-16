@@ -2,7 +2,7 @@
 	"name": "mongo-tree",
 	"author": "Joshua Jung",
 	"description": "tree-structure adapter for CRUD operations for arbitrary tree data structures to mongodb.",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"main": "index.js",
 	"files": [
 		"index.js"
